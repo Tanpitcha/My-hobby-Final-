@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music - My Hobby</title>
+  <link rel="stylesheet" href="style.css"> <!-- link to your main CSS -->
+</head>
+
+<body>
+
+  <header>
+    <h1>My Hobby</h1>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="painting.html">Painting</a>
+      <a href="music.html"class="active">Music</a>
+      <a href="piano.html">Piano</a>
+      <a href="series.html">Series</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>🎵 Music I Love</h2>
+    <p>
+      Music makes my days brighter.  
+      These are some of my favorite songs that I enjoy listening to on repeat.
+    </p>
+    <img src="must.png" class="mu-st">
+  </section>
+
+  
+  <img src="m1.png" class="music-sticker" alt="music sticker">
+  <img src="m2.png" class="music-sticker small" alt="music sticker">
+
+  <section>
+    <h2 id="music">My Favorite Songs</h2>
+
+    <div class="cards-wrapper">
+
+    <div class="cards">
+      <!-- Song 1 -->
+      <div class="card">
+        <img src="you.jpg" alt="You Are My Light">
+        <h3>You Are My Light</h3>
+        <p>By Zhao Lusi — a sweet and comforting song that feels warm and soft.</p>
+        <a href="https://youtu.be/i0WHH5hbSmg?si=nqfVfM3YdCIVMf9F" class="btn">Listen</a>
+      </div>
+
+      <!-- Song 2 -->
+      <div class="card">
+        <img src="wup.jpg" alt="คุณนายตื่นสาย">
+        <h3>คุณนายตื่นสาย (Wake Up Please)</h3>
+        <p>A fun and catchy Thai song with playful vibes and an easy listening rhythm.</p>
+        <a href="https://youtu.be/1VP8JrTHoHo?si=3RiPr_c025Ys3T6X" class="btn">Listen</a>
+      </div>
+
+      <!-- Song 3 -->
+      <div class="card">
+        <img src="tt.jpg" alt="The Trouble Is">
+        <h3>The Trouble Is… ปัญหาของฉัน</h3>
+        <p>An emotional and relatable song about complicated feelings.</p>
+        <a href="https://youtu.be/SoPWNNwJz4A?si=GSvyK6OS6FZCP0Z4" class="btn">Listen</a>
+      </div>
+
+      <!-- Song 4 -->
+      <div class="card">
+        <img src="st.jpg" alt="ที่คั่นหนังสือ">
+        <h3>ที่คั่นหนังสือ(Sometimes)</h3>
+        <p>A soft, sentimental song about love, memories, and holding on.</p>
+        <a href="https://youtu.be/L051YSpEEYU?si=gAbXCCB6yQQ3ziTS" class="btn">Listen</a>
+      </div>
+
+      <div class="card">
+        <img src="fm.jpg" alt="รักได้รักไปแล้ว">
+        <h3>รักได้รักไปแล้ว</h3>
+        <p>A gentle Thai love song that expresses the feeling of 
+          <strong>“รักได้รักไปแล้ว”</strong> — once you love someone, 
+          you can’t turn it back.</p>
+        <a href="https://www.youtube.com/watch?v=zRni2qGhlOs&list=PLUN5VvYCITpiSzjcCuOit6wkdXDIpct2O&index=128" class="btn">Listen</a>
+      </div>
+
+      <div class="card">
+        <img src="wa.jpg" alt="ไม่น่าไปรักเธอเลย">
+        <h3>ไม่น่าไปรักเธอเลย(Walk Away)</h3>
+        <p>A heartfelt Thai song about loving someone you maybe shouldn’t have emotional and relatable.</p>
+        <a href="https://www.youtube.com/watch?v=PUYRGhmcXWQ" class="btn">Listen</a>
+      </div>
+    </div>
+
+      <!-- RIGHT: Mini Game -->
+      <div class="mini-game-box">
+       <h3>Rock • Paper • Scissors</h3>
+
+       <div class="rps-buttons">
+          <button data-choice="rock">✊</button>
+          <button data-choice="paper">✋</button>
+          <button data-choice="scissors">✌️</button>
+        </div>
+
+       <p id="rpsResult">Make your move!</p>
+        <p id="scoreBoard">You: 0 | Computer: 0</p>
+      </div>
+
+
+    </div>
+    
+<script src="script.js"></script>
+
+  </section>
+
+  <footer>
+    <p>© 2026 My Hobby Website | Created by Tanpitcha</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

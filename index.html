@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hobbies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>My Hobby</h1>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="painting.html">Painting</a>
+    <a href="music.html">Music</a>
+    <a href="piano.html">Piano</a>
+    <a href="series.html">Series</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Welcome to My World of Hobbies</h2>
+  <p>
+    I love expressing creativity, relaxing with music,
+    and enjoying emotional stories.  
+    These are the hobbies that make me happy.
+  </p>
+  <img src="fst.png" class="ser-st2">
+  <img src="must.png" class="mu-st2">
+  <img src="sf.png" class="pai-st2">
+  <img src="nst.png" class="pia-st2">
+</section>
+
+<img src="c.png" class="cat-sticker" alt="cat sticker">
+
+
+<!-- PAINTING -->
+<section class="hobby">
+  <img src="p.jpg" alt="Painting">
+  <div class="text">
+    <h2>🎨 Painting</h2>
+    <p>
+      Painting helps me relax and express my imagination.
+      I enjoy using colors to show my feelings without words.
+    </p>
+    <a href="painting.html" class="btn">See more</a>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section class="hobby reverse">
+  <img src="m.jpg" alt="Music">
+  <div class="text">
+    <h2>🎧 Listening to Music</h2>
+    <p>
+      Music makes my day better.
+      It helps me feel calm, happy, and inspired.
+    </p>
+    <a href="music.html" class="btn">See more</a>
+  </div>
+</section>
+
+<!-- PIANO -->
+<section class="hobby">
+  <img src="pp.jpg" alt="Piano">
+  <div class="text">
+    <h2>🎹 Playing Piano</h2>
+    <p>
+      Playing the piano helps me focus and relax.
+      I enjoy practicing songs that I love.
+    </p>
+    <a href="piano.html" class="btn">See more</a>
+  </div>
+</section>
+
+<!-- SERIES -->
+<section class="hobby reverse">
+  <img src="s.jpg" alt="Series">
+  <div class="text">
+    <h2>📺 Watching Series</h2>
+    <p>
+      I enjoy watching romantic series.
+      The stories are soft, emotional, and comforting.
+    </p>
+    <a href="series.html" class="btn">See more</a>
+  </div>
+</section>
+
+
+<div class="table-title">
+  <div class="title-box">
+    <h2>My List</h2>
+  </div>
+  <img src="lst.png" alt="List Sticker" class="lst-img">
+</div>
+
+<table>
+    <tr>
+        <th>Food</th>
+        <th>Color</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Ramen🍜</td>
+        <td>Pink🩷</td>
+        <td>China</td>
+    </tr>
+    <tr>
+        <td>Sushi🍣</td>
+        <td>Purple💜</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>Sashimi</td>
+        <td>Blue🩵</td>
+        <td>Thailand</td>
+    </tr>
+    <tr>
+        <td>xiao long bao</td>
+        <td>cream</td>
+        <td>Australia</td>
+    </tr>
+    <tr>
+        <td>noodles🍜</td>
+        <td>Brown🤎</td>
+        <td>New Zealand</td>
+    </tr>
+</table>
+
+  <!-- Contact -->
+  <section id="con">
+    <h2 id="contact">Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Hobbies | Created with love and creativity</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
+
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you for reaching out! 🎨🎵');
+      form.reset();
+    });
+ </script>
+
+
+</body>
+</html>
+i say wait
+

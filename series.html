@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series - My Hobby</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>My Hobby</h1>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="painting.html">Painting</a>
+      <a href="music.html">Music</a>
+      <a href="piano.html">Piano</a>
+      <a href="series.html" class="active">Series</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>🎬 Series I Love</h2>
+    <p>
+      These Chinese romantic series are my comfort shows.  
+      Soft, emotional, and full of heartwarming moments.
+    </p>
+    <img src="sest.png" class="ser-st">
+  </section>
+  
+  <img src="s1.png" class="series-sticker" alt="series sticker">
+  <img src="s2.png" class="series-sticker small" alt="series sticker">
+
+  <!-- SERIES CARDS -->
+  <section>
+    <h2 id="series">My Favorite Series</h2>
+    
+   <div class="cards-wrapper">
+
+    <div class="cards">
+
+      <!-- 1 Hidden Love -->
+      <div class="card">
+        <img src="hl.webp" alt="Hidden Love">
+        <h3>Hidden Love</h3>
+        <p>A sweet coming-of-age romance about secret love and growing up.</p>
+        <a href="https://www.sanook.com/movie/146251/" class="btn">Watch</a>
+      </div>
+
+      <!-- 2 Love in the Clouds -->
+      <div class="card">
+        <img src="li.jpg" alt="Love in the Clouds">
+        <h3>Love in the Clouds</h3>
+        <p>A fantasy love story filled with magic, warmth, and emotional moments.</p>
+        <a href="https://www.sanook.com/movie/185723/" class="btn">Watch</a>
+      </div>
+
+      <!-- 3 When I Fly Towards You -->
+      <div class="card">
+        <img src="wi.jpg" alt="When I Fly Towards You">
+        <h3>When I Fly Towards You</h3>
+        <p>A school romance full of youthfulness, friendship, and first love.</p>
+        <a href="https://www.sanook.com/movie/147363/" class="btn">Watch</a>
+      </div>
+
+      <!-- 4 First Frost -->
+      <div class="card">
+        <img src="ff.webp" alt="First Frost">
+        <h3>First Frost</h3>
+        <p>A beautifully filmed slow-burn love story with soft emotions.</p>
+        <a href="https://www.sanook.com/movie/171475/" class="btn">Watch</a>
+      </div>
+
+      <div class="card">
+        <img src="tbt.jpg" alt="The Best Thing">
+        <h3>The Best Thing</h3>
+        <p>A heartwarming romantic story about finding comfort, growth, and love in unexpected moments.</p>
+        <a href="https://www.sanook.com/movie/180695/" class="btn">Listen</a>
+      </div>
+      
+      <div class="card">
+        <img src="fiys.avif" alt="Falling Into Your Smile">
+        <h3>Falling Into Your Smile</h3>
+        <p>A sweet esports romance about teamwork, ambition, and slowly falling in love while chasing dreams.</p>
+        <a href="https://entertainment.trueid.net/detail/9me7EeQOerlj" class="btn">Listen</a>
+      </div>
+   </div>
+    
+       <!-- RIGHT: Mini Game -->
+      <div class="mini-game-box">
+       <h3>Rock • Paper • Scissors</h3>
+
+       <div class="rps-buttons">
+          <button data-choice="rock">✊</button>
+          <button data-choice="paper">✋</button>
+          <button data-choice="scissors">✌️</button>
+        </div>
+
+       <p id="rpsResult">Make your move!</p>
+        <p id="scoreBoard">You: 0 | Computer: 0</p>
+      </div>
+
+
+    </div>
+    
+<script src="script.js"></script>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 My Hobby Website | Created by Tanpitcha</p>
+  </footer>
+
+  <!-- MENU SCRIPT -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

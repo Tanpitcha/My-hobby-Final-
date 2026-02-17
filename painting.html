@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painting - My Hobby</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your existing CSS -->
+</head>
+<body>
+
+  <header>
+    <h1>My Hobby</h1>
+    <button id="menu-toggle">☰</button>
+    <nav class="navbar">
+        <div class="nav-links">
+          <a href="index.html" >Home</a>
+          <a href="painting.html" class="active">Painting</a>
+          <a href="music.html">Music</a>
+          <a href="piano.html">Piano </a>
+          <a href="series.html"> Series </a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+  </header>
+
+  <section class="hero">
+    <h2>🎨 Painting Style</h2>
+    <p>
+      Painting allows me to express my feelings, imagination, and creativity. 
+      It’s relaxing and makes me feel peaceful every time I pick up my brush.
+    </p>
+    <img src="sf.png" class="pai-st">
+  </section>
+
+  <img src="pa1.png" class="painting-sticker" alt="painting sticker">
+  <img src="ppp.png" class="painting-sticker small" alt="painting sticker">
+  
+
+
+
+
+  <section>
+    <h2 id="painting">My Drawing Style</h2>
+
+    <div class="cards-wrapper">
+      
+    <div class="cards">
+      <div class="card">
+        <img src="lll.jpg" alt="Nature Landscape">
+        <h3>Peaceful Landscape</h3>
+        <p>A calm mountain and lake scene I painted with watercolor on canvas.</p>
+        <a href="https://unsplash.com/s/photos/peaceful-landscape" class="btn">View Details</a>
+      </div>
+
+      <div class="card">
+        <img src="nv.png" alt="Night View Painting">
+        <h3>Night View Painting</h3>
+        <p>This painting explores soft gradients and warm tones, blending imagination with reality.</p>
+        <a href="https://www.shutterstock.com/th/search/night-painting?dd_referrer=https%3A%2F%2Fwww.google.com%2F" class="btn">View Painting</a>
+      </div>
+
+      
+      <div class="card">
+        <img src="b2.jpg" alt="Flowers">
+        <h3>Blossom</h3>
+        <p>This one of my favorite flowers during I went to Japan.</p>
+        <a href="https://www.shutterstock.com/th/search/flower-vase-painting" class="btn">View Details</a>
+      </div>
+
+      <div class="card">
+        <img src="oce2.jpg" alt="Ocean Painting">
+        <h3>Ocean Breeze</h3>
+        <p>Acrylic painting of waves hitting the rocks, symbolizing strength.</p>
+        <a href="https://www.shutterstock.com/th/search/sea-shore-paintings" class="btn">View Details</a>
+      </div>
+
+      <div class="card">
+        <img src="ss.jpg" alt="Sunset Sky">
+        <h3>Sunset Sky</h3>
+        <p>   A soft pink and orange sunset capturing a calm, peaceful evening sky.</p>
+        <a href="https://www.istockphoto.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/sunset-painting" class="btn">View Details</a>
+      </div>
+
+      <div class="card">
+        <img src="cad.jpg" alt="Cloudy Afternoon">
+        <h3>Cloudy Afternoon</h3>
+        <p> A soft pastel sky on a calm and quiet afternoon. </p>
+        <a href="https://www.istockphoto.com/th/search/2/image-film?phrase=Cloudy%20Afternoonpainting" class="btn">View Details</a>
+      </div>
+    </div>
+
+      <!-- RIGHT: Mini Game -->
+      <div class="mini-game-box">
+       <h3>Rock • Paper • Scissors</h3>
+
+       <div class="rps-buttons">
+          <button data-choice="rock">✊</button>
+          <button data-choice="paper">✋</button>
+          <button data-choice="scissors">✌️</button>
+        </div>
+
+       <p id="rpsResult">Make your move!</p>
+        <p id="scoreBoard">You: 0 | Computer: 0</p>
+      </div>
+
+
+    </div>
+    
+<script src="script.js"></script>
+
+  </section>
+
+  <footer>
+    <p>© 2026 My Hobby Website | Created by Tanpitcha</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

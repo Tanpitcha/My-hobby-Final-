@@ -1,0 +1,871 @@
+body {
+  font-family: 'Delius', cursive;
+  background: #f9f6f2;
+  color: #3e2c23;
+  margin: 0;
+}
+
+header {
+  background: #7b5e57;
+  color: #fff;
+  padding: 1.2em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;   /* 🔥 makes it stick */
+  top: 0;             /* stick to top */
+  z-index: 1000;      /* stay above everything */
+}
+
+
+header h1 {
+  font-family: 'Delius', cursive;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+  position: relative;
+}
+
+header h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #ffd6c9;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.2em;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: #ffd6c9;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+}
+
+#menu-toggle {
+  display: none;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 1em;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+  #painting{
+    color:rgb(212, 128, 142);
+    font-size: 45px;
+}
+
+#music{
+    color:rgb(212, 128, 142);
+    font-size: 45px;
+}
+
+#piano{
+    color:rgb(212, 128, 142);
+    font-size: 45px;
+}
+
+#series{
+    color:rgb(212, 128, 142);
+    font-size: 45px;
+}
+
+#contact{
+    color:rgb(212, 128, 142);
+    font-size: 45px;
+  }
+
+  section {
+    padding: 3em 1.5em;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 5em 2em;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(212, 128, 142, 0.18);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  background: rgba(123, 94, 87, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+}
+.hero img {
+  position: absolute;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-family: 'Delius', cursive;
+  font-size: 3em;
+  font-weight: 700;
+  color: #5a433c;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: heroSlideDown 1s ease forwards;
+}
+
+.hero h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #7b5e57;
+  margin: 0.5em auto 0 auto;
+  border-radius: 2px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* From top → down */
+@keyframes heroSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* From bottom → up */
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+  .hero {
+    padding: 3em 1.2em;
+  }
+
+  .hero h2 {
+    font-size: 2.3em;
+  }
+
+  .hero p {
+    font-size: 1.05em;
+  }
+}
+
+section:nth-child(even) {
+    background: #f2ebe6;
+    border-radius: 15px;
+    padding: 3em 1.5em;
+}
+
+/* --- Hero / Section Topic Titles --- */
+.hero h2, section h2 {
+  font-family: 'Delius', cursive;
+  font-weight: 700; /* slightly bolder */
+  font-size: 3em;               /* bigger and bold */
+  color: #5a433c;               /* dark brown */
+  text-align: center;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  position: relative;
+}
+
+/* Optional: subtle underline / accent */
+.hero h2::after, section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #7b5e57;          /* warm brown accent */
+  margin: 0.5em auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Paragraph under topic */
+.hero p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0.5em auto 2em auto;
+}
+
+.hobby {
+  display: flex;              /* สำคัญมาก */
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 4em auto;
+  padding: 0 2em;
+}
+
+.hobby img {
+  width: 320px;
+  border-radius: 16px;
+}
+
+.hobby .text {
+  max-width: 500px;
+}
+
+.hobby h2 {
+  margin-bottom: 0.5em;
+}
+
+.hobby p {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+.hobby.reverse {
+  flex-direction: row-reverse;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  .hobby {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hobby h2,
+  .hobby p {
+    text-align: center;
+  }
+
+  .hobby img {
+    width: 90%;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 1.5em;
+  margin-top: 1.5em;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+  .card {
+    width: 300px;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Delius', cursive;
+    background: #fff8f2; /* remove for index-cards */
+    padding: 1em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    background: #7b5e57;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+.btn:hover {
+  background: #6a4d45;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+  form {
+    max-width: 500px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  form input, form textarea {
+    padding: 0.8em;
+    border: 1px solid #cbbeb3;
+    border-radius: 6px;
+    background: #fff8f2;
+  }
+
+  form button {
+    background: #7b5e57;
+    color: #fff8f2;
+    border: none;
+    padding: 0.8em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5em;
+    background: #7b5e57;
+    color: #fff8f2;
+    font-size: 0.95em;
+}
+  
+  table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 2em auto;
+    background: #fff8f2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Delius', cursive;
+}
+
+th {
+    background-color: #635455;
+    color: #fff8f2;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table2{background: #7b5e57;
+   padding:20px;
+   color: #fff8f2;
+   text-align: center;}
+
+table {
+    border-collapse: collapse;
+    width: 60%; /* ปรับขนาดตารางให้เล็กลง (จาก 100% → 60%) */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    background: #fff8f2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* เพิ่มเงาให้ดูโดดเด่น */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #table2 {
+    border-collapse: collapse;
+    width: 30%; /* ปรับขนาดตารางให้เล็กลง (จาก 100% → 60%) */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* เพิ่มเงาให้ดูโดดเด่น */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+.table-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+/* Background box */
+.title-box {
+  background: #7b5e57;           /* brown background */
+  padding: 12px 100px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Title text */
+.title-box h2 {
+  margin: 0;
+  font-family: 'Delius', cursive;
+  font-size: 2.2em;
+  color: #fff8f2;               /* light text */
+  letter-spacing: 1px;
+}
+
+/* Sticker image */
+.lst-img {
+  width: 120px;
+  height: auto;
+  transform: rotate(-8deg);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .table-title {
+    flex-direction: column;
+  }
+
+  .lst-img {
+    width: 60px;
+  }
+}
+
+
+/* --- Navigation Hover + Active --- */
+nav a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+
+/* --- Card Hover Details --- */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.index-cards .card {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* --- Button Detail --- */
+.btn {
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #6a4d45;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Section Detail Background --- */
+section:nth-child(even) {
+  background: #f2ebe6;
+  border-radius: 15px;
+  padding: 3em 1.5em;
+}
+
+/* --- Soft Divider --- */
+section {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* --- Table polish --- */
+table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#table2 {
+  border-collapse: collapse;
+  width: 23%;             /* keeps the table small and centered */
+  margin: 4em auto 0 auto; /* added top margin to push table down */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
+  border-radius: 20px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.pia-st2 {
+  position: absolute;
+  left: -75px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: -8px;
+  width: 170px;
+  opacity: 1;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+.ser-st2 {
+  position: absolute;
+  left: 0px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 150px;
+  width: 150px;
+  opacity: 0.9;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+.mu-st2 {
+  position: absolute;
+  right: 10px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 150px;
+  width: 150px;
+  opacity: 1;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+.pai-st2 {
+  position: absolute;
+  right: -30px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 15px;
+  width: 130px;
+  opacity: 1;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+
+
+
+
+.piano-sticker {
+  position: fixed;
+  bottom: 40px;       /* ตำแหน่งสูง-ต่ำ */
+  right: 30px;        /* จัดไว้ขวา */
+  width: 120px;       /* ขนาดสติกเกอร์ */
+  opacity: 0.9;      /* ให้จางๆ มินิมอล */
+  pointer-events: none; /* ไม่รบกวนการกดปุ่ม */
+  z-index: 10;
+}
+
+.piano-sticker.small {
+  bottom: 200px;      
+  right: 20px;
+  width: 80px;
+  opacity: 0.9;       /* อันเล็กให้จางกว่า */
+}
+
+.pia-st {
+  position: absolute;
+  right: 30px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 20px;
+  width: 190px;
+  opacity: 1;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+
+
+.painting-sticker {
+  position: fixed;
+  bottom: 40px;       /* ตำแหน่งสูง-ต่ำ */
+  right: 30px;        /* จัดไว้ขวา */
+  width: 120px;       /* ขนาดสติกเกอร์ */
+  opacity: 0.8;      /* ให้จางๆ มินิมอล */
+  pointer-events: none; /* ไม่รบกวนการกดปุ่ม */
+  z-index: 10;
+}
+
+.painting-sticker.small {
+  bottom: 200px;      
+  right: 20px;
+  width: 80px;
+  opacity: 1;       /* อันเล็กให้จางกว่า */
+}
+
+.hero {
+  position: relative;
+}
+
+.pai-st {
+  position: absolute;
+  right: 30px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 20px;
+  width: 120px;
+  opacity: 0.9;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+
+
+
+.music-sticker {
+  position: fixed;
+  bottom: 40px;       /* ตำแหน่งสูง-ต่ำ */
+  right: 30px;        /* จัดไว้ขวา */
+  width: 120px;       /* ขนาดสติกเกอร์ */
+  opacity: 0.9;      /* ให้จางๆ มินิมอล */
+  pointer-events: none; /* ไม่รบกวนการกดปุ่ม */
+  z-index: 10;
+}
+
+.music-sticker.small {
+  bottom: 200px;      
+  right: 20px;
+  width: 80px;
+  opacity: 0.9;       /* อันเล็กให้จางกว่า */
+}
+
+.mu-st {
+  position: absolute;
+  right: 20px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 20px;
+  width: 180px;
+  opacity: 0.7 ;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+
+.series-sticker {
+  position: fixed;
+  bottom: 40px;       /* ตำแหน่งสูง-ต่ำ */
+  right: 30px;        /* จัดไว้ขวา */
+  width: 120px;       /* ขนาดสติกเกอร์ */
+  opacity: 0.9;      /* ให้จางๆ มินิมอล */
+  pointer-events: none; /* ไม่รบกวนการกดปุ่ม */
+  z-index: 10;
+}
+
+.series-sticker.small {
+  bottom: 200px;      
+  right: 20px;
+  width: 80px;
+  opacity: 0.9;       /* อันเล็กให้จางกว่า */
+}
+
+.ser-st {
+  position: absolute;
+  right: 30px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 50px;
+  width: 130px;
+  opacity: 0.7 ;
+  transform: rotate(-5deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+
+.l-st {
+  position: absolute;
+  right:650px;    /* รูปจะยื่นออกมาข้างๆ hero */
+  top: 2530px;
+  width: 130px;
+  opacity: 1;
+  transform: rotate(-1deg); /* ทำให้ดูน่ารักเหมือนสติกเกอร์ */
+}
+
+.cat-sticker {
+  position: fixed;
+  bottom: 40px;       /* ตำแหน่งสูง-ต่ำ */
+  right: -80px;        /* จัดไว้ขวา */
+  width:300px;       /* ขนาดสติกเกอร์ */
+  opacity: 1;      /* ให้จางๆ มินิมอล */
+  pointer-events: none; /* ไม่รบกวนการกดปุ่ม */
+  z-index: 10;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #7b5e57;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;  /* 1 card per row on phone */
+    }
+
+    table {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 3em 1.2em;
+  }
+
+  .hero h2 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  }
+
+  .hero img {
+    display: none; /* hide stickers on small screens */
+  }
+}
+
+
+
+/* FLEX WRAPPER */
+.cards-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+  flex-direction: row-reverse;   /* 🔥 THIS moves mini-game to left */
+}
+
+/* CARDS GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  flex: 2;
+}
+
+/* MINI GAME RIGHT SIDE */
+.mini-game-box {
+  flex: 1;
+  background: linear-gradient(135deg, #ffe0f0, #ffd6e7);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  margin-right:40px ;
+}
+
+.mini-game-box h3 {
+  margin-bottom: 15px;
+}
+
+.rps-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.rps-buttons button {
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rps-buttons button:hover {
+  transform: scale(1.2);
+}
+
+/* Result text */
+#rpsResult {
+  margin-top: 1em;
+  font-weight: 600;
+  color: #d4808e;
+}
+
+#scoreBoard {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  color: #5a433c;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mini-game-box {
+    width: 90%;
+  }
+}

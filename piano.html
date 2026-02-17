@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano - My Hobby</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+
+  <header>
+    <h1>My Hobby</h1>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="painting.html">Painting</a>
+      <a href="music.html">Music</a>
+      <a href="piano.html"class="active">Piano</a>
+      <a href="series.html">Series</a>
+      <a href="index.html#contact">Contact</a>
+
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>🎹 Piano Song I Play </h2>
+    <p>
+      Playing piano helps me relax, focus, and express emotions through music.  
+      These are some of my favorite songs I love to play.
+    </p>
+    <img src="nst.png" class="pia-st">
+  </section>
+
+  <img src="pia1.png" class="piano-sticker" alt="piano sticker">
+  <img src="pi1.png" class="piano-sticker small" alt="piano sticker">
+
+  <section>
+    <h2 id="piano">My Piano Playlist</h2>
+
+    <div class="cards-wrapper">
+
+    <div class="cards">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="pr.jpg" alt="il Porco Rosso Piano">
+        <h3>Il Porco Rosso</h3>
+        <p>A peaceful and warm Studio Ghibli theme with a soft emotional melody.</p>
+        <a href="https://youtu.be/E-bRpXdXUlA?si=CPrGgtJsRw1kHzXp" class="btn">Listen</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="mgr.jpg" alt="Howl's Moving Castle">
+        <h3>Merry-Go-Round Of Life</h3>
+        <p>Beautiful waltz melody by Joe Hisaishi—romantic and magical.</p>
+        <a href="https://youtu.be/lB4PRX737-0?si=cx_YUlVeuKwiTqlu" class="btn">Listen</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="wanna.jpg" alt="Wanna Be Yours">
+        <h3>Wanna Be Yours</h3>
+        <p>A soft piano with her song of thai singer.</p>
+        <a href="https://www.youtube.com/watch?v=8ONLsKcc294&list=RD8ONLsKcc294&start_radio=1" class="btn">Listen</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="sa.jpg" alt="Spirited Away">
+        <h3>Spirited Away</h3>
+        <p>Calm and nostalgic soundtrack from Studio Ghibli’s Spirited Away.</p>
+        <a href="https://youtu.be/ESJ7TQvFFrA?si=AjpPwESGJJJ22Q2h" class="btn">Listen</a>
+      </div>
+
+      <div class="card">
+        <img src="bse.jpg" alt="Before Spring Ends">
+        <h3>Before Spring Ends</h3>
+        <p>A soft and emotional piano piece that feels like the gentle ending of spring — calm, nostalgic, and beautiful.</p>
+        <a href="https://www.youtube.com/watch?v=tX4rUDi_ER4&list=RDtX4rUDi_ER4&start_radio=1" class="btn">Listen</a>
+      </div>
+
+      <div class="card">
+        <img src="sp.jpg" alt="Sparkle">
+        <h3>Sparkle</h3>
+        <p>A bright and emotional piano piece from *Your Name* — powerful, dreamy, and full of feeling.</p>
+        <a href="https://www.youtube.com/watch?v=cKgnDmpb4BU" class="btn">Listen</a>
+      </div>
+
+    </div>
+   
+    
+       <!-- RIGHT: Mini Game -->
+      <div class="mini-game-box">
+       <h3>Rock • Paper • Scissors</h3>
+
+       <div class="rps-buttons">
+          <button data-choice="rock">✊</button>
+          <button data-choice="paper">✋</button>
+          <button data-choice="scissors">✌️</button>
+        </div>
+
+       <p id="rpsResult">Make your move!</p>
+        <p id="scoreBoard">You: 0 | Computer: 0</p>
+      </div>
+
+
+    </div>
+    
+<script src="script.js"></script>
+
+  </section>
+
+  <footer>
+    <p>© 2026 My Hobby Website | Created by Tanpitcha</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
